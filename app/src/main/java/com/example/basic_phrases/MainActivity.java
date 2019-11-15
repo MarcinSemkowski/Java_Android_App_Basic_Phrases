@@ -12,6 +12,13 @@ public class MainActivity extends AppCompatActivity {
        int id = view.getId();
        String ourId = "";
        ourId = view.getResources().getResourceEntryName(id);
+
+       // ourId button  Clicked name (String)
+        //get identifier  package name (com.example.basic_phrases) file (raw)
+
+       int resourceId = getResources().getIdentifier(ourId,"raw","com.example.basic_phrases");
+
+       
         Log.i("Button Tabbed:", "button Click : " + ourId);
 
     }
