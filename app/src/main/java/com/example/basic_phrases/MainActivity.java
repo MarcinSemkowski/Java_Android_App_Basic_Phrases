@@ -2,6 +2,7 @@ package com.example.basic_phrases;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
        int resourceId = getResources().getIdentifier(ourId,"raw","com.example.basic_phrases");
 
-       
+        MediaPlayer mPlayer = MediaPlayer.create(this,resourceId);
+        mPlayer.start();
+
         Log.i("Button Tabbed:", "button Click : " + ourId);
 
     }
