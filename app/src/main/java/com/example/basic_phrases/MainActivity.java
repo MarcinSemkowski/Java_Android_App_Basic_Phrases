@@ -9,7 +9,10 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     public void buttonTapped(View view){
-        Log.i("Button Tabbed:", "button Click : " + view.getId());
+       int id = view.getId();
+       String ourId = "";
+       ourId = view.getResources().getResourceEntryName(id);
+        Log.i("Button Tabbed:", "button Click : " + ourId);
 
     }
 
